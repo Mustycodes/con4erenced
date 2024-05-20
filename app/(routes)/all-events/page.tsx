@@ -1,5 +1,4 @@
-import React from "react";
-import Event from "../components/Event";
+import Event from "@/app/components/Event";
 
 const AllEvents = () => {
   const events = [

@@ -7,17 +7,24 @@ const NavLinks = () => {
   const pathname = usePathname();
   const activeClass = "border-b-2 border-orange-600";
 
+  const getClassStyle = (path: string) =>
+    `${pathname === path ? activeClass : ""} pb-1`;
+
   return (
     <ul className='flex space-x-4'>
       <li>
-        <Link className={`${pathname === "/" ? activeClass : ""} pb-1`} href='/'>Home</Link>
+        <Link className={getClassStyle("/")} href='/'>
+          Home
+        </Link>
       </li>
       <li>
-        <Link className={`${pathname === "/all-events" ? activeClass : ""} pb-1`} href='/all-events'>All Events</Link>
+        <Link className={getClassStyle("/all-events")} href='/all-events'>
+          All Events
+        </Link>
       </li>
       <li>
         <Link
-          className={`${pathname === "/create-event" ? activeClass : ""} pb-1`}
+          className={getClassStyle('/create-event')}
           href='/create-event'
         >
           Create Event

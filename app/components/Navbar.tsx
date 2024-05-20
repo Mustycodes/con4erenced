@@ -10,6 +10,9 @@ const Navbar = () => {
           erenced
         </Link>
         <NavLinks />
+        <div>
+          <Link href="/login">Login</Link>
+        </div>
       </div>
     </nav>
   );
