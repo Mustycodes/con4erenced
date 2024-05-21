@@ -1,31 +1,31 @@
-"use client";
-
+"use client"
 import Link from "next/link";
-import { useState } from "react";
+import React, { useState } from "react";
 
-const LoginPage = () => {
-  const [loginData, setLoginData] = useState({ username: "", password: "" });
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = event.target;
-    setLoginData((prevLoginData) => ({
-      ...prevLoginData,
-      [name]: value,
-    }));
-  };
-  const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log(loginData);
-  };
+const SignUpPage = () => {
+    const [signupData, setsignupData] = useState({ username: "", password: "" });
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = event.target;
+        setsignupData((prevsignupData) => ({
+          ...prevsignupData,
+          [name]: value,
+        }));
+      };
+      const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        console.log(signupData);
+      };
   return (
     <div className='flex min-h-screen'>
       <div className='flex-1'>Background HERE</div>
       <div className='flex-1 flex justify-center items-center'>
         <div>
-          <h2 className='font-bold text-3xl mb-6'>Login to your account</h2>
+          <h2 className='font-bold text-3xl mb-6'>Create an account</h2>
           <form onSubmit={handleSubmit} className='flex flex-col space-y-4'>
             <div className='flex flex-col gap-y-2'>
-              <label htmlFor='username' className="text-lg text-gray-600">Username</label>
+              <label htmlFor='username' className='text-lg text-gray-600'>
+                Username
+              </label>
               <input
                 name='username'
                 type='text'
@@ -34,7 +34,9 @@ const LoginPage = () => {
               />
             </div>
             <div className='flex flex-col'>
-              <label htmlFor='password' className="text-lg text-gray-600">Password</label>
+              <label htmlFor='password' className='text-lg text-gray-600'>
+                Password
+              </label>
               <input
                 name='password'
                 type='text'
@@ -51,8 +53,13 @@ const LoginPage = () => {
               </button>
             </div>
           </form>
-          <div className="mt-2">
-            <p>Don't have an account? <Link href='/sign-up' className="text-orange-500">Create account</Link></p>
+          <div className='mt-2'>
+            <p>
+              Remember your password?{" "}
+              <Link href='/login' className='text-orange-500'>
+                Login
+              </Link>
+            </p>
           </div>
         </div>
       </div>
@@ -60,4 +67,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default SignUpPage;
