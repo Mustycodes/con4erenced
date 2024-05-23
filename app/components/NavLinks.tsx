@@ -13,13 +13,8 @@ const NavLinks = () => {
   return (
     <ul className='flex space-x-4'>
       <li>
-        <Link className={getClassStyle("/")} href='/'>
-          Home
-        </Link>
-      </li>
-      <li>
         <Link className={getClassStyle("/all-events")} href='/all-events'>
-          All Events
+          Find Events
         </Link>
       </li>
       <li>
