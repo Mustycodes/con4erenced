@@ -1,0 +1,62 @@
+Events App Structure
+
+- create a mock event data
+  {
+id:
+name:
+date:
+time:
+price:
+imageUrl
+location:{address:, city:, country:}
+}
+sessions [
+ {
+id:
+name:
+presenter:
+duration:
+level:
+abstract:
+}
+]
+
+-probably setup redux here
+
+Module 4
+- on click of cancel button go back to events list
+- set up 404 route guard for events/:id that dont match
+-? add a route guard so user gets an alert if they want to leave page without saving
+- set up a preloader for the events
+- apply active style to active link
+- set up path for user profile (/user/profile)
+- look into lazy loading
+
+Module 5
+- create interface for single event
+- set up user login form
+- set up a fake auth on the FE
+- redirect to all events page after login in and also after clicking cancel
+- disable buttons and show validation messages when button is hovered on
+- redirect when login is successful
+- set up edit profile logic
+-set up validators for multiple cases
+
+- Create the form for adding a new event
+- setup validation
+- setup a prview display of the image added
+- setup a create session form functionality.
+- it should live on events/session/new
+
+Module 6
+- Display the sessions page and a button to add a new one
+- when in add mode, display the add session form
+- on submit, toggle out of add mode
+- on cancel, do same
+
+Module 7
+- Set up a functionality to toggle the display of the session details or just the session title
+- display a fire icon next to sessions with at least 4 votes
+- add the buttons to filter the levels
+- set up the functionality
+- add the sorting buttons (by votes and by name), make votes default

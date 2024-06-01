@@ -1,0 +1,12 @@
+Things I learnt while building Events App
+
+- React doesn't allow objects like Dates or Arrays as children, 
+you need to convert value to string first
+
+- could not find .jpg images until i did declare  module '*.jpg' in index.d.ts
+- issue with setting floating label active state
+
+change calendar picker icon color
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}

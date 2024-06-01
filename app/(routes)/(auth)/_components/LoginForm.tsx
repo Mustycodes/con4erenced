@@ -25,7 +25,7 @@ const LoginForm = () => {
         <input
           name='username'
           type='text'
-          className='border p-2 border-gray-500 w-full rounded'
+          className='bg-white bg-opacity-80 border p-2 w-full text-black rounded'
           onChange={handleChange}
         />
       </div>
@@ -36,14 +36,14 @@ const LoginForm = () => {
         <input
           name='password'
           type='text'
-          className='border p-2 border-gray-500 w-full rounded'
+          className='bg-white bg-opacity-80 border p-2 w-full text-black rounded'
           onChange={handleChange}
         />
       </div>
       <div>
         <button
           type='submit'
-          className='w-full bg-orange-500 hover:bg-orange-600 cursor-pointer p-2 text-white font-semibold text-lg'
+          className='w-full bg-orange-500 hover:bg-orange-600 cursor-pointer rounded p-2 text-white font-semibold text-lg'
         >
           Login
         </button>
