@@ -6,13 +6,13 @@ interface EventProps {
 }
 const Event = ({ event }: EventProps) => {
   return (
-    <article className='relative w-full bg-red-100 shadow-lg rounded-md'>
-      <Link href={`/all-events/${event.id}`} className="w-full h-44">
-        <Image src={event.imageUrl} layout="fill" className="rounded-t-md object-cover" alt="" />
+    <article className='max-w-sm border border-gray-200 shadow-md rounded-lg bg-white overflow-hidden'>
+      <Link href={`/all-events/${event.id}`}>
+        <Image src={event.imageUrl} width={800} height={800} alt={event.name} />
       </Link>
-      <div className='flex flex-col p-4'>
-        <Link href={`/all-events/${event.id}`}>
-          <h2 className='font-bold'>{event.name}</h2>
+      <div className='m-4'>
+        <Link href={`/all-events/${event.id}`} className='hover:underline'>
+          <h4 className='font-bold text-xl'>{event.name}</h4>
         </Link>
         <p>
           {event.date} {event.time}
